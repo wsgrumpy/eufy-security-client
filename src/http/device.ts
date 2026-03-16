@@ -2174,6 +2174,7 @@ export class Device extends TypedEmitter<DeviceEvents> {
       Device.isLockWifiT85L0(type) ||
       Device.isLockWifiT8531(type) ||
       Device.isLockWifiT85D0(type)
+      type === DeviceType.LOCK_85F0
     );
   }
 
