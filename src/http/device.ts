@@ -1630,7 +1630,7 @@ export class Device extends TypedEmitter<DeviceEvents> {
           return value !== undefined
             ? typeof value === "number"
               ? !!value
-              : value === "1" || value.toLowerCase() === "true"
+              : value === "1"  value.toLowerCase() === "true"
             : booleanProperty.default !== undefined
               ? booleanProperty.default
               : false;
@@ -1760,7 +1760,7 @@ export class Device extends TypedEmitter<DeviceEvents> {
     }
     if (
       Station.isDeviceControlledByHomeBaseBySn(this.getStationSerial()) &&
-      (metadata[PropertyName.DeviceMotionDetectionType] !== undefined ||
+      (metadata[PropertyName.DeviceMotionDetectionType] !== undefined 
         metadata[PropertyName.DeviceMotionDetectionTypeAllOtherMotions] !== undefined) &&
       this.isCamera()
     ) {
@@ -1866,8 +1866,8 @@ export class Device extends TypedEmitter<DeviceEvents> {
 
   static isCamera(type: number): boolean {
     return (
-      type == DeviceType.CAMERA ||
-      type == DeviceType.CAMERA2 ||
+      type == DeviceType.CAMERA 
+      type == DeviceType.CAMERA2 
       type == DeviceType.CAMERA_E ||
       type == DeviceType.CAMERA2C ||
       type == DeviceType.INDOOR_CAMERA ||
@@ -2173,7 +2173,7 @@ export class Device extends TypedEmitter<DeviceEvents> {
       Device.isLockWifiT8502(type) ||
       Device.isLockWifiT85L0(type) ||
       Device.isLockWifiT8531(type) ||
-      Device.isLockWifiT85D0(type)
+      Device.isLockWifiT85D0(type) ||
       type === DeviceType.LOCK_85F0
     );
   }
